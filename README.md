@@ -8,7 +8,7 @@ This project analyzes **public perception of safety issues** across three key tr
 - 🏛️ **MARTA** *(Government Agency)*
 - 🚗 **Uber** *(Private Company)*
 
-We use Twitter data to perform sentiment and topic analysis to uncover trends, concerns, and public opinion about safety for each organization.
+We use X, IG, etc. data to perform sentiment and topic analysis to uncover trends, concerns, and public opinion about safety for each organization.
 
 ---
 
