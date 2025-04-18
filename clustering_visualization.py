@@ -49,9 +49,6 @@ def cluster_and_visualize(df, org_name, k):
     texts = df['post_body_text'].astype(str).tolist()
     embeddings = model.encode(texts, show_progress_bar=True)
 
-    # Run Elbow Method
-    plot_elbow(embeddings, org_name)
-
     # K-means clustering
     kmeans = KMeans(n_clusters=k, random_state=42)
     labels = kmeans.fit_predict(embeddings)
@@ -88,9 +85,9 @@ plot_elbow(embeddings, org_name="MARTA")
 
 AtlBeltline_texts = beltline_df['post_body_text'].astype(str).tolist()
 embeddings = model.encode(AtlBeltline_texts, show_progress_bar=True)
-plot_elbow(embeddings, org_name="ATLBELTLINE")
+plot_elbow(embeddings, org_name="AtlantaBeltline")
 
 # Hardcode the best k based on the elbow plot
 cluster_and_visualize(uber_df, "UBER", k=3)
-cluster_and_visualize(marta_df, "MARTA", k=3)
-cluster_and_visualize(beltline_df, "AtlantaBeltline", k=3)
+cluster_and_visualize(marta_df, "MARTA", k=7)
+cluster_and_visualize(beltline_df, "AtlantaBeltline", k=8)
